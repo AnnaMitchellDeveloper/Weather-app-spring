@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>🌡️ Weather app</title>
-	<link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-			<input type="text" placeholder="Please, enter city...">
-		</div>
-		<div class="when-where">
-			<p id="city">Atlanta, GA</p>
-			<p id="date">Sunday 27 July 2022</p>
-		</div>
-		<div class="temperatureNow">
-			<p id="temperature">28°</p>
-			<p id="feelsLike">Feels like 30°</p>
-			<p id="conditions">Sunny</p>
-			<p id="varation">Min:25° Max:30°</p>
-		</div>
-	</div>
-	
-	<script src="src/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌡️ Weather app</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <input id="inputField" type="text" placeholder="Please, enter city..." />
+      </div>
+      <div class="when-where">
+        <p id="city">Atlanta, GA</p>
+        <p id="date">Sunday 27, July 2022</p>
+      </div>
+      <div class="temperatureNow">
+        <p id="temperature">28°</p>
+        <p id="feelsLike">Feels like 30°</p>
+        <p id="conditions">Sunny</p>
+        <p id="variation">Min:25° Max:30°</p>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
 </html>
