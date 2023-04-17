@@ -19,5 +19,8 @@ async function getInfo(data){
 }
 //* Function to show info on the screen *//
 function displayResult(weatherResult){
-	console.log(weatherResult);
+	let city = document.querySelector("#city");
+	city.textContent = `${weatherResult.name}, ${weatherResult.sys.country}`;
+	let temperature = document.querySelector("#temperature");
+	temperature.innerHTML = `${Math.round(weatherResult.main.temp)}°F`
 }
