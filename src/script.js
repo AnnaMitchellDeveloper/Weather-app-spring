@@ -65,12 +65,11 @@ function getCurrentDate() {
     "November",
     "December",
   ];
-  
+
   let daysOfWeek = days[currentDate.getDay()];
   let todayDate = currentDate.getDate();
   let month = months[currentDate.getMonth()];
   let year = currentDate.getFullYear();
   let fullCurrentDate = document.querySelector("#date");
   fullCurrentDate.innerHTML = `${daysOfWeek} ${todayDate}, ${month} ${year}`;
-  
 }

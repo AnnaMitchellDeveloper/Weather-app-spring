@@ -4,12 +4,18 @@ body {
   background-position: center;
   font-family: "Nunito Sans", sans-serif;
 }
+footer {
+	text-align: center;
+}
+footer a {
+	color: black;
+}
 .container {
   max-width: 600px;
   background-color: #FFD4D4;
   padding: 50px;
   text-align: center;
-  margin: 50px auto;
+  margin: 30px auto;
   border-radius: 10px;
   opacity: 0.6;
 }
