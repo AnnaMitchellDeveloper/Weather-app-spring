@@ -11,6 +11,7 @@ function enter(event) {
     getInfo(input.value);
   }
 }
+
 //* Function to get results from API *//
 async function getInfo(data) {
   const getInfoResult = await fetch(
@@ -19,6 +20,7 @@ async function getInfo(data) {
   const weatherResult = await getInfoResult.json();
   displayResult(weatherResult);
 }
+
 //* Function to show info on the screen *//
 function displayResult(weatherResult) {
   let city = document.querySelector("#city");
@@ -39,6 +41,7 @@ function displayResult(weatherResult) {
     weatherResult.main.temp_min
   )}°F  Max:${Math.round(weatherResult.main.temp_max)}°F`;
 }
+
 //* Function to show current date *//
 function getCurrentDate() {
   const currentDate = new Date();
@@ -73,4 +76,14 @@ function getCurrentDate() {
   let fullCurrentDate = document.querySelector("#date");
   fullCurrentDate.innerHTML = `${daysOfWeek} ${todayDate}, ${month} ${year}`;
 }
-getInfo("New York");
+
+//* Function to show your current location *//
+const keyForMyLocation = "34a6a0c6bf1742b3b74f4dd91c191f37";
+ async function getMyIP() {
+  const res = await fetch(
+    `https://ipgeolocation.abstractapi.com/v1/?api_key=${keyForMyLocation}`
+  );
+  const result = await res.json();
+  getInfo(result.city); 
+ }
+ getMyIP();
