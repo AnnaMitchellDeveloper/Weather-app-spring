@@ -7,7 +7,7 @@ input.addEventListener("keydown", enter);
 
 //* Function to get info from input field *//
 function enter(event) {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     getInfo(input.value);
   }
 }
@@ -73,3 +73,4 @@ function getCurrentDate() {
   let fullCurrentDate = document.querySelector("#date");
   fullCurrentDate.innerHTML = `${daysOfWeek} ${todayDate}, ${month} ${year}`;
 }
+getInfo("New York");
